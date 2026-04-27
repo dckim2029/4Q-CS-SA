@@ -8,27 +8,42 @@
 body {
 font-family: Arial;
 background:#f5efe6;
-margin:20px;
+margin:0;
+}
+
+nav {
+background:#e3f2fd;
+padding:15px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:3px solid #d0e8ff;
+}
+
+nav a {
+text-decoration:none;
+color:#333;
+font-weight:bold;
+margin-left:15px;
 }
 
 header {
-background:#e3f2fd;
-padding:15px;
 text-align:center;
-border-radius:15px;
+padding:20px;
 }
 
 .products {
-display:flex;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 gap:15px;
-justify-content:center;
+padding:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .item {
 background:#fff0f6;
 padding:10px;
-width:160px;
 border-radius:15px;
 text-align:center;
 box-shadow:2px 2px 10px #e6d6f5;
@@ -48,84 +63,98 @@ border:none;
 padding:6px;
 border-radius:10px;
 cursor:pointer;
+margin-top:5px;
 }
 
 li button {
 margin-left:10px;
 background:#ffccd5;
 }
-</style>
 
+#checkout {
+background:#e3f2fd;
+padding:20px;
+max-width:800px;
+margin:20px auto;
+border-radius:15px;
+}
+
+#cartList {
+padding-left:20px;
+}
+</style>
 </head>
 
 <body>
 
+<nav>
+  <div><strong>🧸 SnugglePals</strong></div>
+  <div>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
 <header>
-<h1>🧸 SnugglePals</h1>
-<p>Cute Pastel Stuffed Animals 💕</p>
+<h2>Cute Pastel Stuffed Animals </h2>
 </header>
 
-<h2>Shop Plushies</h2>
-
 <div class="products">
-
-<div class="item"><img src="https://i.ebayimg.com/images/g/2YkAAeSw4r9pwct8/s-l500.webp" alt="Pastel Bunny Bear"><h3>Pastel Bunny Bear</h3><p>₱250</p><button onclick="addToCart('Pastel Bunny Bear',250)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/hrUAAeSwY21oi42w/s-l500.webp" alt="Cloud Duck"><h3>Cloud Duck</h3><p>₱260</p><button onclick="addToCart('Cloud Duck',260)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/Zn8AAeSwyZRp0NaQ/s-l500.webp" alt="Honey Dragon"><h3>Honey Dragon</h3><p>₱270</p><button onclick="addToCart('Honey Dragon',270)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/aqUAAeSwvaRo1I2u/s-l500.webp" alt="Sleepy Bear"><h3>Sleepy Bear</h3><p>₱280</p><button onclick="addToCart('Sleepy Bear',280)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/vNIAAeSwbq9pofUy/s-l500.webp" alt="Mini Pig"><h3>Mini Pig</h3><p>₱240</p><button onclick="addToCart('Mini Pig',240)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/H-kAAeSw0y9prlA0/s-l500.webp" alt="Blush Rabbit"><h3>Blush Rabbit</h3><p>₱240</p><button onclick="addToCart('Blush Rabbit',240)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/qYsAAeSwU4Npo4TN/s-l500.webp" alt="Lavender Rabbit"><h3>Lavender Rabbit</h3><p>₱260</p><button onclick="addToCart('Lavender Rabbit',260)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/KewAAeSwETJp2UFi/s-l500.webp" alt="Bluey Rabbit"><h3>Bluey Rabbit</h3><p>₱250</p><button onclick="addToCart('Bluey Rabbit',250)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/thsAAeSwuqdp5OOl/s-l500.webp" alt="Sleepy Rabbit"><h3>Sleepy Rabbit</h3><p>₱270</p><button onclick="addToCart('Sleepy Rabbit',270)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/Lp0AAOSwHRtmnq2a/s-l500.webp" alt="Mini Rabbit"><h3>Mini Rabbit</h3><p>₱200</p><button onclick="addToCart('Mini Rabbit',200)">Add</button></div>
-
-<div class="item"><img src="https://i.ebayimg.com/images/g/xG0AAeSw2QVpxzIJ/s-l500.webp" alt="Milk Cat"><h3>Milk Cat</h3><p>₱250</p><button onclick="addToCart('Milk Cat',250)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/ZKgAAeSw7ztp6TRC/s-l500.webp" alt="Sharky Cat"><h3>Sharky Cat</h3><p>₱260</p><button onclick="addToCart('Sharky Cat',260)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/6fYAAeSwzN5p1pyZ/s-l500.webp" alt="Sleepy Cat"><h3>Sleepy Cat</h3><p>₱280</p><button onclick="addToCart('Sleepy Cat',280)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/HZIAAeSwtuBph9-v/s-l500.webp" alt="Mini Cat"><h3>Mini Cat</h3><p>₱230</p><button onclick="addToCart('Mini Cat',230)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/DQUAAeSwmT1p6jHc/s-l500.webp" alt="Choco Cat"><h3>Choco Cat</h3><p>₱240</p><button onclick="addToCart('Choco Cat',240)">Add</button></div>
-
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.jMHbwBpoEt4gNsBWGOZPIAHaHa" alt="Shark Plush"><h3>Shark Plush</h3><p>₱300</p><button onclick="addToCart('Shark Plush',300)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.QIvAJ9cFdQ1rHfxrNcz_IAHaE1" alt="Black Tip Shark"><h3>Black Tip Shark</h3><p>₱280</p><button onclick="addToCart('Black Tip Shark',280)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th?q=Great+Whale+Shark+Plush" alt="Whale Shark Plush"><h3>Whale Shark</h3><p>₱260</p><button onclick="addToCart('Whale Shark',260)">Add</button></div>
-
-<div class="item"><img src="https://tycollector.com/pluffies/pluf-images/snoopy-32146.jpg" alt="Pink Snoopy"><h3>Pink Snoopy</h3><p>₱270</p><button onclick="addToCart('Pink Snoopy',270)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.RFFfLSMD4Hxsjri_T3za3QHaHa" alt="Blue Snoopy"><h3>Blue Snoopy</h3><p>₱290</p><button onclick="addToCart('Blue Snoopy',290)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP._dCRy10ISBaffNHNonzI9QHaHa" alt="Spiderman Trio Plush"><h3>Spiderman Trio</h3><p>₱220</p><button onclick="addToCart('Spiderman Trio',220)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.CBoUB6-oIK6KpLc64tH2RgHaHa" alt="Fluttershy Plushie"><h3>Fluttershy Plushie</h3><p>₱230</p><button onclick="addToCart('Fluttershy Plushie',230)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.DwMoDbHJhHqIvj3akocF3gHaIS" alt="Rainbow Dash Plush"><h3>Rainbow Dash</h3><p>₱280</p><button onclick="addToCart('Rainbow Dash',280)">Add</button></div>
-
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.JD3vgsoCswFSeAI8xj7fNgAAAA" alt="Pastel Dog Plush"><h3>Pastel Dog</h3><p>₱240</p><button onclick="addToCart('Pastel Dog',240)">Add</button></div>
-<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.8VH9SVVNYzaSw3oP4VHAlwHaHa" alt="Dog Plush Toy"><h3>Dog Plush</h3><p>₱250</p><button onclick="addToCart('Dog Plush',250)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/2YkAAeSw4r9pwct8/s-l500.webp" alt="Pastel Bunny Bear plush toy"><h3>Bunny Bear</h3><p>₱250</p><button onclick="addToCart('Bunny Bear',250)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/hrUAAeSwY21oi42w/s-l500.webp" alt="Cloud Duck plush toy"><h3>Cloud Duck</h3><p>₱260</p><button onclick="addToCart('Cloud Duck',260)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/Zn8AAeSwyZRp0NaQ/s-l500.webp" alt="Honey Dragon plush toy"><h3>Honey Dragon</h3><p>₱270</p><button onclick="addToCart('Honey Dragon',270)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/aqUAAeSwvaRo1I2u/s-l500.webp" alt="Sleepy Bear plush toy"><h3>Sleepy Bear</h3><p>₱280</p><button onclick="addToCart('Sleepy Bear',280)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/vNIAAeSwbq9pofUy/s-l500.webp" alt="Mini Pig plush toy"><h3>Mini Pig</h3><p>₱240</p><button onclick="addToCart('Mini Pig',240)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/H-kAAeSw0y9prlA0/s-l500.webp" alt="Blush Rabbit plush toy"><h3>Blush Rabbit</h3><p>₱240</p><button onclick="addToCart('Blush Rabbit',240)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/qYsAAeSwU4Npo4TN/s-l500.webp" alt="Lavender Rabbit plush toy"><h3>Lavender Rabbit</h3><p>₱260</p><button onclick="addToCart('Lavender Rabbit',260)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/KewAAeSwETJp2UFi/s-l500.webp" alt="Bluey Rabbit plush toy"><h3>Bluey Rabbit</h3><p>₱250</p><button onclick="addToCart('Bluey Rabbit',250)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/thsAAeSwuqdp5OOl/s-l500.webp" alt="Sleepy Rabbit plush toy"><h3>Sleepy Rabbit</h3><p>₱270</p><button onclick="addToCart('Sleepy Rabbit',270)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/Lp0AAOSwHRtmnq2a/s-l500.webp" alt="Mini Rabbit plush toy"><h3>Mini Rabbit</h3><p>₱200</p><button onclick="addToCart('Mini Rabbit',200)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/xG0AAeSw2QVpxzIJ/s-l500.webp" alt="Milk Cat plush toy"><h3>Milk Cat</h3><p>₱250</p><button onclick="addToCart('Milk Cat',250)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/ZKgAAeSw7ztp6TRC/s-l500.webp" alt="Sharky Cat plush toy"><h3>Sharky Cat</h3><p>₱260</p><button onclick="addToCart('Sharky Cat',260)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/6fYAAeSwzN5p1pyZ/s-l500.webp" alt="Sleepy Cat plush toy"><h3>Sleepy Cat</h3><p>₱280</p><button onclick="addToCart('Sleepy Cat',280)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/HZIAAeSwtuBph9-v/s-l500.webp" alt="Mini Cat plush toy"><h3>Mini Cat</h3><p>₱230</p><button onclick="addToCart('Mini Cat',230)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/DQUAAeSwmT1p6jHc/s-l500.webp" alt="Choco Cat plush toy"><h3>Choco Cat</h3><p>₱240</p><button onclick="addToCart('Choco Cat',240)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.jMHbwBpoEt4gNsBWGOZPIAHaHa" alt="Shark plush toy"><h3>Shark Plush</h3><p>₱300</p><button onclick="addToCart('Shark Plush',300)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.QIvAJ9cFdQ1rHfxrNcz_IAHaE1" alt="Black shark plush toy"><h3>Black Shark</h3><p>₱280</p><button onclick="addToCart('Black Shark',280)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th?q=Great+Whale+Shark+Plush" alt="Whale shark plush toy"><h3>Whale Shark</h3><p>₱260</p><button onclick="addToCart('Whale Shark',260)">Add</button></div>
+<div class="item"><img src="https://tycollector.com/pluffies/pluf-images/snoopy-32146.jpg" alt="Pink Snoopy plush toy"><h3>Pink Snoopy</h3><p>₱270</p><button onclick="addToCart('Pink Snoopy',270)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.RFFfLSMD4Hxsjri_T3za3QHaHa" alt="Blue Snoopy plush toy"><h3>Blue Snoopy</h3><p>₱290</p><button onclick="addToCart('Blue Snoopy',290)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP._dCRy10ISBaffNHNonzI9QHaHa" alt="Spiderman plush set"><h3>Spiderman Trio</h3><p>₱220</p><button onclick="addToCart('Spiderman Trio',220)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.CBoUB6-oIK6KpLc64tH2RgHaHa" alt="Fluttershy plush toy"><h3>Fluttershy</h3><p>₱230</p><button onclick="addToCart('Fluttershy',230)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.DwMoDbHJhHqIvj3akocF3gHaIS" alt="Rainbow Dash plush toy"><h3>Rainbow Dash</h3><p>₱280</p><button onclick="addToCart('Rainbow Dash',280)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.JD3vgsoCswFSeAI8xj7fNgAAAA" alt="Pastel dog plush toy"><h3>Pastel Dog</h3><p>₱240</p><button onclick="addToCart('Pastel Dog',240)">Add</button></div>
+<div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.8VH9SVVNYzaSw3oP4VHAlwHaHa" alt="Dog plush toy"><h3>Dog Plush</h3><p>₱250</p><button onclick="addToCart('Dog Plush',250)">Add</button></div>
+<div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRibUl5IETXDWRDEVBs5qh8r556jW9LqvLAag&s" alt="Pink bunny plush toy"><h3>Pink Bunny</h3><p>₱250</p><button onclick="addToCart('Pink Bunny',250)">Add</button></div>
+<div class="item"><img src="https://i.pinimg.com/236x/cc/84/78/cc8478465e66da42f441e34bfafb8f14.jpg" alt="Cute lamb plush toy"><h3>Cute Lamb</h3><p>₱250</p><button onclick="addToCart('Cute Lamb',250)">Add</button></div>
+<div class="item"><img src="https://i.ebayimg.com/images/g/HbAAAOSwpllmRO3N/s-l1200.png" alt="Blue sloth plush toy"><h3>Blue Sloth</h3><p>₱250</p><button onclick="addToCart('Blue Sloth',250)">Add</button></div>
 <div class="item"><img src="https://thfvnext.bing.com/th/id/OIP.n4gmsJiSjXbWQKBlb2MH6AHaHa?w=208&h=208&c=7&r=0&o=5&cb=thfvnext&dpr=1.3&pid=1.7" alt="Purple Snoopy Plush"><h3>Purple Snoopy</h3><p>₱250</p><button onclick="addToCart('Purple Snoopy',250)">Add</button></div>
-
-<div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRibUl5IETXDWRDEVBs5qh8r556jW9LqvLAag&s" alt="Pink Bunny Plush"><h3>Pink Bunny</h3><p>₱250</p><button onclick="addToCart('Pink Bunny',250)">Add</button></div>
-<div class="item"><img src="https://i.pinimg.com/236x/cc/84/78/cc8478465e66da42f441e34bfafb8f14.jpg" alt="Cute Lamb Plush"><h3>Cute Lamb</h3><p>₱250</p><button onclick="addToCart('Cute Lamb',250)">Add</button></div>
-<div class="item"><img src="https://i.ebayimg.com/images/g/HbAAAOSwpllmRO3N/s-l1200.png" alt="Blue Sloth Plush"><h3>Blue Sloth</h3><p>₱250</p><button onclick="addToCart('Blue SLoth',250)">Add</button></div>
-<div class="item"><img src="https://eliteboutique.ie/wp-content/uploads/2026/04/WhatsApp-Image-2025-07-15-at-07.15.01.jpeg" alt="Pastel Dragon Plush"><h3>Pastel Dragon</h3><p>₱250</p><button onclick="addToCart('Pastel Dragon',250)">Add</button></div>
+<div class="item"><img src="https://eliteboutique.ie/wp-content/uploads/2026/04/WhatsApp-Image-2025-07-15-at-07.15.01.jpeg" alt="Pastel dragon plush toy"><h3>Dragon</h3><p>₱250</p><button onclick="addToCart('Dragon',250)">Add</button></div>
 
 </div>
+
 <hr>
 
 <h2>🛒 Cart</h2>
 <ul id="cartList"></ul>
 <p>Total: ₱<span id="total">0</span></p>
 
-<h3>Order Summary</h3>
-<div id="orderSummary"></div>
+<div id="checkout">
 
-<hr>
+<h3>Checkout</h3>
 
-<h2>Checkout</h2>
+<form action="http://52.74.133.173/cs3/checkout.php" method="POST" onsubmit="prepareOrder()">
 
-<form action="http://52.74.133.173/cs3/checkout.php" method="GET">
-<input type="text" name="cust_name" placeholder="Name" required>
-<input type="text" name="cust_addr" placeholder="Address" required>
-<input type="email" name="cust_email" placeholder="Email" required>
+<input type="text" name="cust_name" placeholder="Name" required><br><br>
+<input type="text" name="cust_addr" placeholder="Address" required><br><br>
+<input type="email" name="cust_email" placeholder="Email" required><br><br>
+
 <input type="hidden" name="cust_order" id="cust_order">
-<button type="submit">Checkout 🛍</button>
+
+<button type="submit">Checkout</button>
+
 </form>
+
+</div>
 
 <script>
 let cart = [];
@@ -135,35 +164,32 @@ cart.push({ prod_name: name, prod_price: price });
 updateCart();
 }
 
-function removeItem(index) {
-cart.splice(index, 1);
+function removeItem(i) {
+cart.splice(i, 1);
 updateCart();
 }
 
 function updateCart() {
 let list = document.getElementById("cartList");
-let summary = document.getElementById("orderSummary");
 let total = 0;
 
 list.innerHTML = "";
-summary.innerHTML = "";
 
-cart.forEach((item, index) => {
+cart.forEach((item, i) => {
 total += item.prod_price;
 
 list.innerHTML += `
 <li>
 ${item.prod_name} - ₱${item.prod_price}
-<button onclick="removeItem(${index})">❌</button>
+<button onclick="removeItem(${i})">❌</button>
 </li>
 `;
-
-summary.innerHTML += `<p>${item.prod_name} - ₱${item.prod_price}</p>`;
 });
 
-summary.innerHTML += `<strong>Total: ₱${total}</strong>`;
-
 document.getElementById("total").textContent = total;
+}
+
+function prepareOrder() {
 document.getElementById("cust_order").value = JSON.stringify(cart);
 }
 </script>
